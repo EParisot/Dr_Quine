@@ -1,5 +1,5 @@
 section .data
-	msg:	db	"%ctest%c", 10, 0
+	msg:	db	"%1$c%3$ctest%3$c%2$c", 10, 0
 section .text
 	extern _printf
 	global _main
@@ -10,6 +10,7 @@ func:
 	mov rdi, msg
 	mov rsi, 9
 	mov rdx, 10
+	mov rcx, 34
 	call _printf
 	leave
 	ret
