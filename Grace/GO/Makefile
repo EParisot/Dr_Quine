@@ -6,7 +6,7 @@
 #    By: eparisot <eparisot@42.student.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/07 19:04:14 by eparisot          #+#    #+#              #
-#    Updated: 2019/09/10 20:00:49 by eparisot         ###   ########.fr        #
+#    Updated: 2019/09/10 21:50:44 by eparisot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,5 +25,6 @@ clean	:
 	$(RM) $(NAME)
 
 fclean	:	clean
+	$(RM) Grace_kid.go
 
 re		:	fclean all
