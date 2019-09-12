@@ -6,7 +6,7 @@
 #    By: eparisot <eparisot@42.student.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/09/07 19:04:14 by eparisot          #+#    #+#              #
-#    Updated: 2019/09/10 00:07:07 by eparisot         ###   ########.fr        #
+#    Updated: 2019/09/12 15:56:59 by eparisot         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,9 +27,10 @@ all		:	$(NAME)
 $(NAME)	:	$(SRCS)
 	nasm -f $(FLAGS) $(SRCS) -o $(OBJS)
 	ld $(LDFLAGS) $(OBJS) -o $(NAME)
+	$(RM) $(OBJS)
 
 clean	:
-	$(RM) $(OBJS)
+	$(RM) $(NAME)_*
 
 fclean	:	clean
 	$(RM) $(NAME)
